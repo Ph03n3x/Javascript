@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETC</title>
+</head>
+<body>
+    <h1>De onde você é ? <input type="text" name="fonte" id="fonte"></h1>
+    <input type="button" value="Verificar" onclick="calc()">
+    <div id="res"></div>
+    <script>
+        function calc(){
+            var font = window.document.getElementById('fonte')
+            var res = window.document.getElementById('res')
+            res.innerHTML = `Para os Brasileiros você é`
+            if (font.value != 'Brasil'){
+                res.innerHTML += '<p><strong>Estrangeiro!</strong></p>'
+            } else {
+                res.innerHTML += '<p><strong>Brasileiro!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
